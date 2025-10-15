@@ -1,6 +1,110 @@
-## Gestión de Citas Médicas
+# 🏥 Gestión de Citas Médicas
 
-Aplicación web en Java (Spring Boot) para la gestión básica de citas médicas. Incluye autenticación/roles, vistas con Thymeleaf, generación de informes con JasperReports, envío de correos y persistencia en MariaDB.
+Aplicación web desarrollada en **Java (Spring Boot)** para la gestión de citas médicas. Permite registrar pacientes, médicos y clínicas, gestionar horarios y generar reportes de facturación e historial médico.
+
+---
+
+## 📋 Descripción del proyecto
+
+**Gestión de Citas Médicas** es una aplicación web que facilita la administración de citas entre pacientes y médicos, incluyendo autenticación por roles, generación de informes y envío de notificaciones por correo.  
+El objetivo es digitalizar los procesos clínicos básicos y ofrecer una plataforma moderna y segura para la gestión hospitalaria.
+
+---
+
+## ⚙️ Tecnologías utilizadas
+
+| Categoría | Tecnología |
+|------------|-------------|
+| Lenguaje | Java 17 |
+| Framework | Spring Boot 3 |
+| Construcción | Maven |
+| Base de datos | MariaDB |
+| Persistencia | Spring Data JPA |
+| Plantillas | Thymeleaf |
+| Seguridad | Spring Security |
+| Validación | Spring Boot Validation |
+| Reportes | JasperReports |
+| Mapeo DTOs | MapStruct |
+| Correos | Spring Mail (JavaMailSender) |
+| Archivos Excel | Apache POI |
+
+---
+
+## 🧩 Estructura del proyecto
+
+```
+src/
+ ├── main/java/com/co/gestiondecitasmedicas/     # Código fuente
+ ├── main/resources/templates/                   # Vistas Thymeleaf
+ │    ├── home.html
+ │    ├── index.html
+ │    ├── login.html
+ │    ├── registro.html
+ │    ├── seleccionar-rol.html
+ │    ├── clinica/
+ │    ├── medico/
+ │    └── paciente/
+ ├── main/resources/informes/                    # Reportes Jasper (.jrxml / .jasper)
+ └── main/resources/application.properties       # Configuración
+```
+
+---
+
+## 🚀 Ejecución del proyecto
+
+### Requisitos previos
+- Java 17 (JDK)
+- Maven
+- MariaDB
+
+### Configuración
+Edita `src/main/resources/application.properties` con los datos de tu base de datos:
+
+```properties
+spring.datasource.url=jdbc:mariadb://localhost:3306/gestiondecitasmedicas
+spring.datasource.username=root
+spring.datasource.password=tu_password
+spring.jpa.hibernate.ddl-auto=update
+server.port=8080
+```
+
+### Ejecutar el proyecto
+```bash
+.\mvnw spring-boot:run
+```
+O bien:
+```bash
+java -jar target/gestiondecitasmedicas.jar
+```
+
+---
+
+## 🧠 Herramientas tecnológicas utilizadas
+
+- IntelliJ IDEA / Eclipse  
+- Miro (tablero de planificación)  
+- Git / GitHub para control de versiones  
+- JasperSoft Studio (diseño de reportes)  
+- MariaDB Workbench  
+
+📌 **Tablero Miro:** https://miro.com/welcomeonboard/WW80VURiczJXTi9pazh1WHRDaWJZUElEOHIxdDdUMXJJZ1A2cVhNaXFDR1V4Ti9qUXh1bVoyelIxK2RYUmpiOEpyRXFwYUFLZ3pyMkRjRmFtelhFbmRTdW50VVNFVUhMTTlMR2NrMFZ1RHNvZmlBd1VZVGRKVkptKzBJaHRWTVBNakdSWkpBejJWRjJhRnhhb1UwcS9BPT0hdjE=?share_link_id=928082782380
+
+---
+
+## 👥 Colaboradores
+
+- Equipo de desarrollo: *Metodología_Scrum_EquipoX*  
+- Profesor: *(agregado como colaborador en GitHub para revisión)*
+
+---
+
+## 🛡️ Buenas prácticas
+
+- No subir contraseñas al repositorio.
+- Usar variables de entorno para credenciales.
+- Gestionar migraciones con Flyway o Liquibase.
+- Mantener el código limpio y documentado.
+
 
 ### Resumen técnico
 
