@@ -93,10 +93,7 @@ java -jar target/gestiondecitasmedicas.jar
 
 ## 👥 Colaboradores
 
-- Equipo de desarrollo: *Metodología_Scrum_EquipoX*  
-- Profesor: *(agregado como colaborador en GitHub para revisión)*
-
----
+- Equipo de desarrollo: *Metodología_Scrum_Equipo 1*  
 
 ## 🛡️ Buenas prácticas
 
